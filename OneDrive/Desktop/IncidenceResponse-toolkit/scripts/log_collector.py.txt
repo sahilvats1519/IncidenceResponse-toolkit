@@ -1,0 +1,12 @@
+# scripts/log_collector.py
+
+import datetime
+
+def collect_logs():
+    log_content = f"Log collected at {datetime.datetime.now()}\n"
+    with open("system_logs.txt", "a") as f:
+        f.write(log_content)
+    print("Log collected and saved to system_logs.txt")
+
+if __name__ == "__main__":
+    collect_logs()
